@@ -17,3 +17,28 @@ def CountingDNANucleotides(x) :
 def transcribingDnaToRna(string):
     print(string.replace("T", "U"))
 
+def complementingDna(dna):
+    str =''
+    for x in dna :
+        if x=='T':
+            str = str+'A'
+        elif x == 'A' :
+            str = str + 'T'
+        elif x == 'C':
+            str = str + 'G'
+        elif x == 'G':
+            str = str + 'C'
+    result = str[::-1]
+    print(result)
+
+def wascalliWabbits(months, rep):
+    pop=[1]
+    
+    pop.append(1)
+    x=2
+    while (x<(months)):
+        pop.append(pop[x-1]+pop[x-2]*rep)
+        x=x+1
+    result=0
+   
+    print(pop[months-1])
